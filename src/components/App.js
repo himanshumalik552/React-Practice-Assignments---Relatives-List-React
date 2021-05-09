@@ -1,16 +1,25 @@
-import React, {Component, useState} from "react";
-import '../styles/App.css';
+import React from 'react'
 
-class App extends Component {
-    render() {
+const App = () => {
 
-        return(
-            <div id="main">
-               {/* Do not remove the main div */}
-            </div>
-        )
-    }
+        const list =[{
+            id:"relativeListItem1",
+            name:"javaScript"
+        },{
+            id:"relativeListItem2",
+            name:"Bootstrap"
+        },{
+            id:"relativeListItem3",
+            name:"react"
+        }];
+
+        const listItem = list.map((list)=><li key={list.id}>{list.name}</li>);
+
+    return (
+        <div>
+            <ol key="relativeList">{listItem}</ol>
+        </div>
+    )
 }
 
-
-export default App;
+export default App
